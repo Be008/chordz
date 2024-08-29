@@ -1,0 +1,115 @@
+.cursor {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vinyl {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 100px;
+  border: 27px solid #313131;
+  transform: rotate(0deg);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.45);
+  transition: none;
+  animation: spin 2s linear infinite;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 3px; /* Largura do quadradinho */
+    height: 3px; /* Altura do quadradinho */
+    background-color: black; /* Cor do quadradinho */
+    bottom: -3px; /* Posicionamento do quadradinho abaixo da agulha */
+    left: 50%; /* Centralizando o quadradinho */
+    transform: translateX(-50%); /* Ajuste para centralizar */
+    z-index: 3; /* Z-index para o quadradinho ficar na frente da agulha */
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+}
+
+.cursor .innerDisco {
+  position: absolute;
+  width: 8px; /* Aumentado de 5px para 8px */
+  height: 8px; /* Aumentado de 5px para 8px */
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  border: 8px solid #999;
+  transform: translate(-50%, -50%);
+}
+
+.stripesDisco {
+  position: absolute;
+  width: 35px; /* Aumentado de 32px para 35px */
+  height: 35px; /* Aumentado de 32px para 35px */
+  border-radius: 50px;
+  top: 50%;
+  left: 50%;
+  border: 3px solid #212121;
+  transform: translate(-50%, -50%);
+}
+
+.stripesDisco:before {
+  content: "";
+  position: absolute;
+  width: 40px; /* Aumentado de 40px para 43px */
+  height: 40px; /* Aumentado de 40px para 43px */
+  border-radius: 100px;
+  top: 50%;
+  left: 50%;
+  border: 1px solid #57534e;
+  transform: translate(-50%, -50%);
+}
+
+.stripesDisco:after {
+  content: "";
+  position: absolute;
+  width: 48px; /* Aumentado de 48px para 51px */
+  height: 48px; /* Aumentado de 48px para 51px */
+  border-radius: 100px;
+  top: 50%;
+  left: 50%;
+  border: 1px solid #57534e;
+  transform: translate(-50%, -50%);
+}
+
+.cursor .center {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: yellow;
+  z-index: 3;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+}
