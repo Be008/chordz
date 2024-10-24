@@ -52,7 +52,7 @@ const Modal = ({ show, onClose }) => {
         </button>
         <h2 className="text-2xl font-bold mb-4">O que é o Chordz?</h2>
         <p>
-          
+        Este website foi desenvolvido como parte de um projeto de pesquisa que explora a importância da música na educação. Aqui, você aprenderá o básico sobre teoria musical de forma prática e acessível, com o objetivo de estimular o interesse pela música e demonstrar como ela pode contribuir para o seu desenvolvimento cognitivo e emocional. Aproveite essa ferramenta para dar os primeiros passos na criação musical e entender o impacto positivo que a música pode ter no seu aprendizado.
         </p>
       </motion.div>
     </div>
