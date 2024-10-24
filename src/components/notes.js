@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import SoundButton from './sound-btn';
 
 const NotesSection = () => {
   const [headerRef, headerInView] = useInView({ triggerOnce: true });
@@ -129,9 +128,6 @@ const NotesSection = () => {
           <p className="text-stone-700 text-lg">
             Entender as notas musicais é fundamental para qualquer músico ou compositor. Praticar as notas em diferentes contextos pode ajudar a desenvolver uma compreensão mais profunda de como elas funcionam juntas para criar música.
           </p>
-        </motion.div>
-        <motion.div className='pt-5'>
-          <SoundButton soundFile="/notes.mp3" label="Notas músicais" />
         </motion.div>
       </motion.section>
     </main>
